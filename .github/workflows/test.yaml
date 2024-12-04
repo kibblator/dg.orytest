@@ -15,4 +15,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Say hello
         run: |
+          directory=${1:-.}
+          echo "The files in $directory are:"
+          ls -1 "$directory"
           ./scripts/say_hello.sh
